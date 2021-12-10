@@ -10,7 +10,7 @@ export const APP_PATHS = {
   PRICING: urljoin(BASE_URL, 'pricing'),
   CAREER: urljoin(BASE_URL, 'career'),
   LOGIN: urljoin(BASE_URL, 'login'),
-  SIGNUP: urljoin(BASE_URL, 'register'),
+  SIGNUP: urljoin(BASE_URL, 'signup'),
   USER: {
     BASE: USER_URL,
   },

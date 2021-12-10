@@ -1,5 +1,9 @@
+import { APP_PATHS } from 'app/contants';
 import { Alert, Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+
+import './LoginForm.css';
 
 type LoginFormValues = {
   email: string;
@@ -16,30 +20,39 @@ function LoginForm() {
 
   const onSubmit: SubmitHandler<LoginFormValues> = data => console.log(data);
 
-  const onReset = () => clearErrors();
-
   return (
-    <Form onSubmit={handleSubmit(onSubmit)} onReset={onReset}>
+    <Form className="login-form" onSubmit={handleSubmit(onSubmit)}>
       <Form.Group>
-        <FloatingLabel controlId="email" label="Your Email" className="mb-3">
+        <FloatingLabel controlId="email" label="Email" className="mb-3 text-center">
           <Form.Control placeholder="Enter Your Email here" {...register('email', { required: true })} />
         </FloatingLabel>
         {errors.email && <Alert variant="danger">This field is required</Alert>}
       </Form.Group>
 
       <Form.Group>
-        <FloatingLabel controlId="password" label="Your Password" className="mb-3">
+        <FloatingLabel controlId="password" label="Password" className="mb-3 text-center">
           <Form.Control placeholder="Enter Your Email here" type="password" {...register('password', { required: true })} />
         </FloatingLabel>
         {errors.password && <Alert variant="danger">This field is required</Alert>}
       </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Sign Up
-      </Button>
-      <Button variant="text" type="reset" className="ms-3">
-        Reset
-      </Button>
+      <div className="mb-3">
+        <Button className="login-form__button p-2 text-uppercase" variant="primary" type="submit">
+          Login
+        </Button>
+      </div>
+      <div>
+        Don't remember a password?{' '}
+        <Link to="/reset-password" className="fw-bolder text-uppercase">
+          Reset it
+        </Link>
+      </div>
+      <div>
+        Don't have an account?{' '}
+        <Link to="/signup" className="fw-bolder text-uppercase">
+          Sign Up!
+        </Link>
+      </div>
     </Form>
   );
 }

@@ -1,18 +1,20 @@
-import { APP_PATHS } from 'app/contants';
-import auth from 'app/services/auth';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+
+import './Header.css';
+import { APP_PATHS } from 'app/contants';
+import auth from 'app/services/auth';
 
 function Header() {
   const isAuth = auth.isAuthenticated;
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="sticky-top" collapseOnSelect>
+    <Navbar bg="dark" variant="dark" expand="lg" className="header sticky-top" collapseOnSelect>
       <Container fluid="lg">
         <LinkContainer to={APP_PATHS.HOME}>
           <Navbar.Brand>awPark</Navbar.Brand>
         </LinkContainer>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle className="header__toggle" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           {!isAuth ? (
             <>

@@ -1,11 +1,10 @@
-import Section from 'app/components/Section';
+import './Home.css';
+import Map from 'app/components/Map';
 
 function Home() {
   return (
     <div className="home">
-      <Section>
-        <h1>Home</h1>
-      </Section>
+      <Map />
     </div>
   );
 }

@@ -1,8 +1,12 @@
+import { Provider } from 'react-redux';
+
+import { store } from 'app/store';
+
 function Main() {
   return (
-    <div>
+    <Provider store={store}>
       <h1>Hello world!</h1>
-    </div>
+    </Provider>
   );
 }
 

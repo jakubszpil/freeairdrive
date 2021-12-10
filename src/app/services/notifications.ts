@@ -1,1 +1,3 @@
-class NotificationsService {}
+class Notifications {}
+
+export const noficications = new Notifications();

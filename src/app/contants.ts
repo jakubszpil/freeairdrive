@@ -16,6 +16,8 @@ export const APP_PATHS = {
   SIGNUP: urljoin(BASE_URL, 'signup'),
   NEWS_ROOM: urljoin(BASE_URL, 'newsroom'),
   ORDER: urljoin(BASE_URL, 'order'),
+  ORDER_LIST: urljoin(BASE_URL, 'orderlist'),
+  WORKER_VIEW: urljoin(BASE_URL, 'workerview'),
   USER: {
     BASE: USER_URL,
   },

@@ -12,6 +12,8 @@ import Signup from 'app/routes/Signup';
 import Newsroom from 'app/routes/Newsroom';
 import Support from 'app/routes/Support';
 import Order from 'app/routes/Order';
+import OrderList from 'app/routes/OrderList';
+import WorkerView from 'app/routes/WorkerView';
 import Layout from 'app/components/Layout';
 import ProtectedRoutes from '../ProtectedRoutes';
 
@@ -27,6 +29,7 @@ function Main() {
             <Route path={APP_PATHS.OVERVIEW} element={<Overview />} />
             <Route path={APP_PATHS.COOPERATION} element={<Cooperation />} />
             <Route path={APP_PATHS.PARK_NOW} element={<Parknow />} />
+            <Route path={APP_PATHS.ORDER_LIST} element={<OrderList />} />
             <Route path={APP_PATHS.NEWS_ROOM} element={<Newsroom />} />
             <Route path={APP_PATHS.SUPPORT} element={<Support />} />
             <Route path={APP_PATHS.CAREER} element={<Career />} />
@@ -34,6 +37,7 @@ function Main() {
             <Route path={APP_PATHS.SIGNUP} element={<Signup />} />
             <Route path={APP_PATHS.TEAM} element={<Team />} />
             <Route path={APP_PATHS.ORDER} element={<Order />} />
+            <Route path={APP_PATHS.WORKER_VIEW} element={<WorkerView />} />
             <Route element={<ProtectedRoutes />}>
               <Route path={APP_PATHS.USER.BASE} />
             </Route>

@@ -6,14 +6,14 @@ import HomeStats from './HomeStats';
 import HomeBanner from './HomeBanner';
 
 function Home() {
-  return (
-    <div className="home">
-      <HomeStart />
-      <HomeWorks />
-      <HomeBanner />
-      <HomeStats />
-    </div>
-  );
+    return (
+        <div className="home">
+            <HomeStart/>
+            <HomeWorks/>
+            <HomeBanner/>
+            <HomeStats/>
+        </div>
+    );
 }
 
 export default Home;

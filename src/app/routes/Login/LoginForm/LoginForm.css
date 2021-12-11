@@ -2,6 +2,15 @@
   width: 100%;
 }
 
+.login-divs {
+  margin-top: 5%;
+  font-size: 1.5em;
+}
+
+.login-bottom {
+  margin-top: 5%;
+}
+
 .forms{
   min-width: 40%;
   text-align: center;

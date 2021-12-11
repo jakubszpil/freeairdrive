@@ -1,9 +1,13 @@
 .order-form {
     max-width: 36rem;
     margin: 0 auto;
-  }
+}
   
-  .order-form__button {
+.order-form__button {
     width: 100%;
-  }
-  
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,6 +1,7 @@
-import { Alert, Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import {useEffect, useState} from "react";
+import { Alert, Button, FloatingLabel, Form } from "react-bootstrap";
 
 import './LoginForm.css';
 
@@ -10,6 +11,12 @@ type LoginFormValues = {
 };
 
 function LoginForm() {
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   const {
     register,
     handleSubmit,
@@ -18,13 +25,14 @@ function LoginForm() {
   } = useForm<LoginFormValues>();
 
   const onSubmit: SubmitHandler<LoginFormValues> = async (data) =>
-    fetch('http://localhost:4000/login', {
-      method: 'POST',
+    fetch("http://localhost:4000/login", {
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-    }).then((res) => console.log(res));
+      // @ts-ignore
+    }).then(res => setData(res));
 
   const onReset = () => clearErrors();
 
@@ -42,7 +50,7 @@ function LoginForm() {
         >
           <Form.Control
             placeholder="Enter Your Email here"
-            {...register('email', { required: true })}
+            {...register("email", { required: true })}
           />
         </FloatingLabel>
         {errors.email && <Alert variant="danger">This field is required</Alert>}
@@ -57,7 +65,7 @@ function LoginForm() {
           <Form.Control
             placeholder="Enter Your Email here"
             type="password"
-            {...register('password', { required: true })}
+            {...register("password", { required: true })}
           />
         </FloatingLabel>
         {errors.password && (
@@ -74,14 +82,14 @@ function LoginForm() {
           Login
         </Button>
       </div>
-      <div>
-        Don't remember a password?{' '}
+      <div className='login-divs'>
+        Don't remember a password?{" "}
         <Link to="/reset-password" className="fw-bolder text-uppercase">
           Reset it
         </Link>
       </div>
-      <div>
-        Don't have an account?{' '}
+      <div className='login-divs login-bottom'>
+        Don't have an account?{" "}
         <Link to="/signup" className="fw-bolder text-uppercase">
           Sign Up!
         </Link>

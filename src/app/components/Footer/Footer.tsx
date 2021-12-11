@@ -35,7 +35,7 @@ const Footer = () => {
                    </LinkContainer>
                 </div>
             </Nav>
-            
+
         </footer>
     )
 }

@@ -7,7 +7,7 @@ import Book from 'app/routes/Book';
 import Overview from 'app/routes/Overview';
 import Cooperation from 'app/routes/Cooperation';
 import Parknow from 'app/routes/Parknow';
-import Career from 'app/routes/Career';
+import Career from 'app/routes/Careers';
 import Login from 'app/routes/Login';
 import Signup from 'app/routes/Signup';
 import Newsroom from 'app/routes/Newsroom';

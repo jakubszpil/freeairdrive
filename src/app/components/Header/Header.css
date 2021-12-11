@@ -20,6 +20,7 @@
   font-weight: 500;
   color: rgb(198, 139, 89) !important;
   text-align: center;
+  margin-left: 15px;
 }
 
 .navbar-brand:first-child {

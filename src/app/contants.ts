@@ -16,6 +16,7 @@ export const APP_PATHS = {
   LOGIN: urljoin(BASE_URL, 'login'),
   SIGNUP: urljoin(BASE_URL, 'signup'),
   RESET_PASSWORD: urljoin(BASE_URL, 'reset-password'),
+  TEAM: urljoin(BASE_URL, 'team'),
   USER: {
     BASE: USER_URL,
   },

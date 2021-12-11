@@ -8,9 +8,11 @@ const flash = require("express-flash");
 const passport = require("passport");
 
 const initializePassport = require("./passportConfig");
+const bodyParser = require("express");
 
 initializePassport(passport);
 
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 
 let allowCrossDomain = function (req, res, next) {

@@ -16,21 +16,24 @@ function LoginForm() {
     clearErrors,
     formState: { errors },
   } = useForm<LoginFormValues>();
-   // @ts-ignore
-  const onSubmit: SubmitHandler<LoginFormValues> = async (data) => fetch({
-      url: 'http://localhost:4000/login',
-      method: 'GET',// @ts-ignore
-      body: data,
-      headers: {// @ts-ignore
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+
+  const onSubmit: SubmitHandler<LoginFormValues> = async (data) =>
+    fetch("http://localhost:4000/login", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
       },
-  }).then(res => console.log(res));
+    }).then((res) => console.log(res));
 
   const onReset = () => clearErrors();
 
   return (
-    <Form className="login-form" onSubmit={handleSubmit(onSubmit)} onReset={onReset}>
+    <Form
+      className="login-form"
+      onSubmit={handleSubmit(onSubmit)}
+      onReset={onReset}
+    >
       <Form.Group>
         <FloatingLabel
           controlId="email"

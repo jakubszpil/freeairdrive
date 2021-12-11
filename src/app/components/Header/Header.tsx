@@ -33,16 +33,16 @@ function Header() {
           {!isAuth ? (
             <>
               <Nav className="me-auto">
-                <LinkContainer to={APP_PATHS.HOME}>
+                <LinkContainer to={APP_PATHS.OVERVIEW}>
                   <Nav.Link>OVERVIEW</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={APP_PATHS.PRICING}>
+                <LinkContainer to={APP_PATHS.PARK_NOW}>
                   <Nav.Link>PARK NOW</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={APP_PATHS.ABOUT}>
+                <LinkContainer to={APP_PATHS.BOOK}>
                   <Nav.Link>BOOK A VEHICLE</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={APP_PATHS.CAREER}>
+                <LinkContainer to={APP_PATHS.COOPERATION}>
                   <Nav.Link>COOPERATION</Nav.Link>
                 </LinkContainer>
               </Nav>

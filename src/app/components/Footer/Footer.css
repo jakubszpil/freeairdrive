@@ -9,9 +9,9 @@
     height: 150px;
 }
 
-a {
+.footer  a.nav-link {
     text-decoration: none;
-    color: white;
+    color: white !important;
     margin-right: 35px;
     font-size: 20px;
 }

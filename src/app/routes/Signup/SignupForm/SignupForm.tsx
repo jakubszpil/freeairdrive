@@ -38,7 +38,7 @@ function SignupForm() {
 
   return (
     <Form
-      className="signup-form"
+      className="signup-form forms"
       onSubmit={handleSubmit(onSubmit)}
       onReset={onReset}
     >

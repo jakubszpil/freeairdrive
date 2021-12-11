@@ -1,8 +1,3 @@
-.signup-form {
-  max-width: 36rem;
-  margin: 0 auto;
-}
-
 .signup-form__buttons {
   display: flex;
   gap: 1em;
@@ -10,4 +5,9 @@
 
 .signup-form__buttons button {
   width: 100%;
+}
+
+.forms{
+  min-width: 40%;
+  text-align: center;
 }

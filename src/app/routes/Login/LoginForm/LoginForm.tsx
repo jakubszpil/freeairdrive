@@ -30,7 +30,7 @@ function LoginForm() {
 
   return (
     <Form
-      className="login-form"
+      className="login-form forms"
       onSubmit={handleSubmit(onSubmit)}
       onReset={onReset}
     >

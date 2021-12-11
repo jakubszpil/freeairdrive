@@ -9,7 +9,7 @@ type Props = {
 
 function Section({ children, className }: Props) {
   return (
-    <section className={classNames('section', className)}>
+    <section className={classNames('section w-50', className)}>
       <Container className="py-4" fluid="lg">
         {children}
       </Container>

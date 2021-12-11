@@ -1,8 +1,8 @@
-.login-form {
-  max-width: 36rem;
-  margin: 0 auto;
-}
-
 .login-form__button {
   width: 100%;
+}
+
+.forms{
+  min-width: 40%;
+  text-align: center;
 }

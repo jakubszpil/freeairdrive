@@ -5,6 +5,10 @@ export const BASE_URL = process.env.PUBLIC_URL ?? '/';
 export const USER_URL = urljoin(BASE_URL, ':username');
 
 export const APP_PATHS = {
+  OVERVIEW: urljoin(BASE_URL, 'overview'),
+  PARK_NOW: urljoin(BASE_URL, 'parknow'),
+  BOOK: urljoin(BASE_URL, 'book'),
+  COOPERATION: urljoin(BASE_URL, 'cooperation'),
   HOME: urljoin(BASE_URL),
   ABOUT: urljoin(BASE_URL, 'about'),
   PRICING: urljoin(BASE_URL, 'pricing'),

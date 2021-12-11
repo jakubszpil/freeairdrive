@@ -1,12 +1,12 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
-import './Header.css';
-import { APP_PATHS } from 'app/contants';
-import auth from 'app/services/auth';
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+import "./Header.css";
+import { APP_PATHS } from "app/constants";
+import auth from "app/services/auth";
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(fab);
 
@@ -49,17 +49,17 @@ function Header() {
               <Nav>
                 <LinkContainer to={APP_PATHS.HOME}>
                   <Nav.Link>
-                    <FontAwesomeIcon icon={['fab', 'facebook']} />
+                    <FontAwesomeIcon size="lg" icon={["fab", "facebook"]} />
                   </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to={APP_PATHS.HOME}>
                   <Nav.Link>
-                    <FontAwesomeIcon icon={['fab', 'twitter']} />
+                    <FontAwesomeIcon size="lg" icon={["fab", "twitter"]} />
                   </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to={APP_PATHS.HOME}>
                   <Nav.Link>
-                    <FontAwesomeIcon icon={['fab', 'youtube']} />
+                    <FontAwesomeIcon size="lg" icon={["fab", "youtube"]} />
                   </Nav.Link>
                 </LinkContainer>
               </Nav>

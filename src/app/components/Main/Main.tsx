@@ -7,6 +7,7 @@ import Layout from 'app/components/Layout';
 import Login from 'app/routes/Login';
 import Signup from 'app/routes/Signup';
 import ProtectedRoutes from '../ProtectedRoutes';
+import Test from "./Test";
 
 function Main() {
   return (

@@ -19,7 +19,15 @@ function SignupForm() {
     formState: { errors },
   } = useForm<SignupFormValues>();
 
-  const onSubmit: SubmitHandler<SignupFormValues> = data => console.log(data);
+  const onSubmit: SubmitHandler<SignupFormValues> = async (data) => fetch({
+      url: 'http://localhost:4000/signup',
+      method: 'POST',// @ts-ignore
+      body: data,
+      headers: {// @ts-ignore
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+  }).then(res => console.log(res));
 
   const onReset = () => clearErrors();
 

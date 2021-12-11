@@ -18,7 +18,16 @@ function LoginForm() {
     formState: { errors },
   } = useForm<LoginFormValues>();
 
-  const onSubmit: SubmitHandler<LoginFormValues> = data => console.log(data);
+  // @ts-ignore
+  const onSubmit: SubmitHandler<LoginFormValues> = async (data) => fetch({
+      url: 'http://localhost:4000/login',
+      method: 'GET',// @ts-ignore
+      body: data,
+      headers: {// @ts-ignore
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+  }).then(res => console.log(res));
 
   return (
     <Form className="login-form" onSubmit={handleSubmit(onSubmit)}>

@@ -24,7 +24,6 @@ main {
 .team-container {
   flex-wrap: wrap;
   width: 70%;
-  height: 900px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -61,7 +60,7 @@ main {
 .team-welcome {
   width: 80%;
   text-align: center;
-  background: url('.../../../../../images/team-welcome.jpg'), #865439;
+  background: url('images/team-welcome.jpg'), #865439;
   opacity: 90%;
   color: white;
   background-size: cover;

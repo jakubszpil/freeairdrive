@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from 'react-router-dom';
 
-import { APP_PATHS } from 'app/contants';
+import { APP_PATHS } from 'app/constants';
 
 function ProtectedRoutes() {
   const user = null;

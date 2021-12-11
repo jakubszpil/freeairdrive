@@ -2,7 +2,7 @@ import {Button} from 'react-bootstrap';
 
 import "./HomeBanner.css"
 import {useNavigate} from "react-router-dom";
-import {APP_PATHS} from "../../../contants";
+import {APP_PATHS} from "app/constants";
 
 function HomeBanner() {
     const navigation = useNavigate();

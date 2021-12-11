@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './Main.css';
-import { APP_PATHS } from 'app/contants';
+import { APP_PATHS } from 'app/constants';
 import Home from 'app/routes/Home';
 import Overview from 'app/routes/Overview';
 import Cooperation from 'app/routes/Cooperation';

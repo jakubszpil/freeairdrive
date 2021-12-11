@@ -2,9 +2,9 @@ import { Alert, Button, FloatingLabel, Form } from 'react-bootstrap';
 
 import "./HomeStats.css"
 
-import {ReactComponent as Image} from "../../../../images/cuate.svg";
+import {ReactComponent as Image} from "images/cuate.svg";
 import {useNavigate} from "react-router-dom";
-import {APP_PATHS} from "../../../contants";
+import {APP_PATHS} from "app/constants";
 
 
 function HomeStats() {

@@ -2,7 +2,7 @@ import { Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import './Footer.css';
-import { APP_PATHS } from 'app/contants';
+import { APP_PATHS } from 'app/constants';
 
 const Footer = () => {
   return (

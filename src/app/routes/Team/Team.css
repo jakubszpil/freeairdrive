@@ -61,7 +61,7 @@ main {
 .team-welcome {
     width: 80%;
     text-align: center;
-    background: url("../../../styles/team-welcome.jpeg"), #865439;
+    background: url(".../../../../../images/team-welcome.jpg"), #865439;
     opacity: 90%;
     color: white;
     background-size: cover;

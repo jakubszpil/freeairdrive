@@ -9,7 +9,7 @@ import Login from 'app/routes/Login';
 import Signup from 'app/routes/Signup';
 import Layout from 'app/components/Layout';
 import ProtectedRoutes from '../ProtectedRoutes';
-import Team from 'app/routes/Team';
+import Map from "../Map/Map";
 
 function Main() {
   return (
@@ -27,6 +27,7 @@ function Main() {
             <Route path={APP_PATHS.CAREER} element={<Career />} />
             <Route path={APP_PATHS.LOGIN} element={<Login />} />
             <Route path={APP_PATHS.SIGNUP} element={<Signup />} />
+            <Route path='/geo' element={<Map />} />
             <Route element={<ProtectedRoutes />}>
               <Route path={APP_PATHS.USER.BASE} />
             </Route>

@@ -3,9 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import MarkerShadow from "leaflet/dist/images/marker-shadow.png";
 import MarkerIcon from "leaflet/dist/images/marker-icon.png";
 import { icon } from "leaflet";
-
 import "./Map.css";
-import { getPolygons } from "app/services/geo";
+import {getPoints, getPolygons} from "app/services/geo";
 import MapSearch from "./MapSearch";
 // @ts-ignore
 delete L.Icon.Default.prototype._getIconUrl;
@@ -27,6 +26,7 @@ function Polygons({ position, radius }: any) {
   const map = useMap();
   useEffect(() => {
     if (position?.latitude && position?.longitude) {
+      getPoints(map, `around:${radius},50.2606725,19.0224603`).then(r => console.log(r));
       getPolygons(map, `around:${radius},50.2606725,19.0224603`).then(
         (polyGroup) => {
           if (group) {

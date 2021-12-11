@@ -17,10 +17,7 @@ function HomeStats() {
             Gasoline cars are responsible <br />
             for almost 15% of air pollution?
           </p>
-          <Button
-            variant="secondary"
-            className="text-white w-75 p-3 fw-bold border-0 align-self-center"
-          >
+          <Button className="bg-secondary w-75 p-3 fw-bold shadow align-self-center">
             MAKE IT BETTER
           </Button>
         </div>

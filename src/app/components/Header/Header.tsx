@@ -39,7 +39,7 @@ function Header() {
                 <LinkContainer to={APP_PATHS.PARK_NOW}>
                   <Nav.Link>PARK NOW</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={APP_PATHS.BOOK}>
+                <LinkContainer to={APP_PATHS.ORDER}>
                   <Nav.Link>BOOK A VEHICLE</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to={APP_PATHS.COOPERATION}>

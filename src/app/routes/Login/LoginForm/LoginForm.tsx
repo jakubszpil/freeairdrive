@@ -16,15 +16,12 @@ function LoginForm() {
     clearErrors,
     formState: { errors },
   } = useForm<LoginFormValues>();
-  // @ts-ignore
+
   const onSubmit: SubmitHandler<LoginFormValues> = async (data) =>
-    fetch({
-      url: 'http://localhost:4000/login',
-      method: 'GET', // @ts-ignore
-      body: data,
+    fetch('http://localhost:4000/login', {
+      method: 'POST',
+      body: JSON.stringify(data),
       headers: {
-        // @ts-ignore
-        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     }).then((res) => console.log(res));
@@ -74,7 +71,7 @@ function LoginForm() {
           variant="primary"
           type="submit"
         >
-          LOG IN
+          Login
         </Button>
       </div>
       <div>

@@ -1,7 +1,7 @@
 .header {
   height: 100px;
   background-color: white;
-  color: #C68B59;
+  color: #c68b59;
 }
 
 .header__toggle {
@@ -25,4 +25,3 @@
 .navbar-brand:first-child {
   margin-right: 5%;
 }
-

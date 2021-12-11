@@ -1,8 +1,8 @@
-import { Alert, Button, FloatingLabel, Form } from "react-bootstrap";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Alert, Button, FloatingLabel, Form } from 'react-bootstrap';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
-import "./LoginForm.css";
+import './LoginForm.css';
 
 type LoginFormValues = {
   email: string;
@@ -16,21 +16,27 @@ function LoginForm() {
     clearErrors,
     formState: { errors },
   } = useForm<LoginFormValues>();
-   // @ts-ignore
-  const onSubmit: SubmitHandler<LoginFormValues> = async (data) => fetch({
+  // @ts-ignore
+  const onSubmit: SubmitHandler<LoginFormValues> = async (data) =>
+    fetch({
       url: 'http://localhost:4000/login',
-      method: 'GET',// @ts-ignore
+      method: 'GET', // @ts-ignore
       body: data,
-      headers: {// @ts-ignore
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+      headers: {
+        // @ts-ignore
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
-  }).then(res => console.log(res));
+    }).then((res) => console.log(res));
 
   const onReset = () => clearErrors();
 
   return (
-    <Form className="login-form" onSubmit={handleSubmit(onSubmit)} onReset={onReset}>
+    <Form
+      className="login-form"
+      onSubmit={handleSubmit(onSubmit)}
+      onReset={onReset}
+    >
       <Form.Group>
         <FloatingLabel
           controlId="email"
@@ -39,7 +45,7 @@ function LoginForm() {
         >
           <Form.Control
             placeholder="Enter Your Email here"
-            {...register("email", { required: true })}
+            {...register('email', { required: true })}
           />
         </FloatingLabel>
         {errors.email && <Alert variant="danger">This field is required</Alert>}
@@ -54,7 +60,7 @@ function LoginForm() {
           <Form.Control
             placeholder="Enter Your Email here"
             type="password"
-            {...register("password", { required: true })}
+            {...register('password', { required: true })}
           />
         </FloatingLabel>
         {errors.password && (
@@ -68,17 +74,17 @@ function LoginForm() {
           variant="primary"
           type="submit"
         >
-          Login
+          LOG IN
         </Button>
       </div>
       <div>
-        Don't remember a password?{" "}
+        Don't remember a password?{' '}
         <Link to="/reset-password" className="fw-bolder text-uppercase">
           Reset it
         </Link>
       </div>
       <div>
-        Don't have an account?{" "}
+        Don't have an account?{' '}
         <Link to="/signup" className="fw-bolder text-uppercase">
           Sign Up!
         </Link>

@@ -1,0 +1,17 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.login h1 {
+  color: #865439;
+  font-weight: 900;
+  font-size: 48px;
+}
+
+.login h2 {
+  color: #c68b59;
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
